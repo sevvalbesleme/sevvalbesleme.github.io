@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#123D4A" />
+  <meta name="description" content="The Next Step — İzmir'de yağmur, sokaklar ve günlük yaşamın kesiştiği noktaları keşfet." />
+  <title>The Next Step — Sokağın hikâyesini keşfet</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="The Next Step ana sayfa">
+      <span class="brand-mark" aria-hidden="true">↗</span>
+      <span>the next <strong>step</strong></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Ana menü">
+      <a href="#story">Proje</a>
+      <a href="#map">Keşfet</a>
+      <a href="#stories">Hikâyeler</a>
+      <a href="#contribute" class="nav-cta">Katkı sun <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> İZMİR · YAĞMUR · GÜNLÜK YAŞAM</p>
+        <h1>Bir sonraki<br /><em>adımını</em> düşün.</h1>
+        <p class="hero-description">Yağmurun sokakta bıraktığı izleri, insanların günlük rotalarını ve kentte güvende hissetme hâlini birlikte keşfediyoruz.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#map">Haritayı keşfet <span>↗</span></a>
+          <a class="text-link" href="#story">Projenin hikâyesi <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✳</span><span>Her sokak bir hikâye.<br /><strong>Her adım bir gözlem.</strong></span></div>
+      </div>
+      <div class="hero-art" aria-label="Yağmur sonrası İzmir sokaklarını temsil eden illüstrasyon" role="img">
+        <div class="art-sun"></div>
+        <div class="art-label label-top">YAĞMURUN İZİ <span>01</span></div>
+        <div class="street street-one"></div><div class="street street-two"></div><div class="street street-three"></div>
+        <div class="building building-a"><i></i><i></i><i></i><i></i></div>
+        <div class="building building-b"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="building building-c"><i></i><i></i><i></i><i></i></div>
+        <div class="water water-one"></div><div class="water water-two"></div>
+        <div class="route-line"></div>
+        <button class="art-pin pin-one" aria-label="Gözlem noktası: biriken su">1</button>
+        <button class="art-pin pin-two" aria-label="Gözlem noktası: yaya rotası">2</button>
+        <div class="art-label label-bottom">ALSANCAK / İZMİR <span>38°25'N</span></div>
+        <div class="art-stamp">WALK<br />WITH<br /><b>CARE</b></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Proje mesajı">
+      <div>YAĞMUR BEREKET OLSUN, FELAKET DEĞİL <span>✳</span> RAIN SHOULD BE MOVEMENT, NOT A FLOOD <span>✳</span> SOKAĞI BİRLİKTE OKUYALIM <span>✳</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="story">
+      <div class="section-kicker">01 / PROJE HAKKINDA</div>
+      <div class="intro-grid">
+        <h2>Suyun yolu,<br /><em>insanın yolu.</em></h2>
+        <div class="intro-text">
+          <p>Şiddetli yağışlar yalnızca sokaklarda su biriktirmez. İnsanların nereden yürüdüğünü, işine nasıl ulaştığını, dükkânını nasıl koruduğunu ve kentte ne kadar güvende hissettiğini de değiştirir.</p>
+          <p><strong>The Next Step</strong>, İzmir'de yağmur suyu birikintilerini günlük yaşam deneyimleriyle birlikte görünür kılan katılımcı bir keşif projesidir.</p>
+          <a class="text-link" href="#stories">Sokak hikâyelerine göz at <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore section-wrap" id="map">
+      <div class="section-heading">
+        <div><div class="section-kicker">02 / SAHADAN GÖZLEMLER</div><h2>Sokağı <em>keşfet.</em></h2></div>
+        <p>Haritadaki noktalara dokun.<br />Her nokta farklı bir deneyim anlatır.</p>
+      </div>
+      <div class="explore-layout">
+        <div class="map-panel">
+          <div class="map-topline"><span><span class="live-dot"></span> ÖRNEK GÖZLEM HARİTASI</span><span>ALSANCAK, İZMİR</span></div>
+          <div class="map-canvas" id="mapCanvas">
+            <div class="map-block block-1"></div><div class="map-block block-2"></div><div class="map-block block-3"></div><div class="map-block block-4"></div>
+            <div class="map-road road-1"></div><div class="map-road road-2"></div><div class="map-road road-3"></div><div class="map-road road-4"></div>
+            <div class="map-water water-pool"></div>
+            <div class="map-route"></div>
+            <button class="map-marker active" data-place="0" style="--x:26%;--y:42%" aria-label="Nokta 1: Biriken su" aria-pressed="true"><span>1</span></button>
+            <button class="map-marker" data-place="1" style="--x:62%;--y:28%" aria-label="Nokta 2: Yaya rotası" aria-pressed="false"><span>2</span></button>
+            <button class="map-marker" data-place="2" style="--x:76%;--y:69%" aria-label="Nokta 3: Esnaf deneyimi" aria-pressed="false"><span>3</span></button>
+            <div class="map-legend"><span><i class="legend-water"></i> Su birikimi</span><span><i class="legend-route"></i> Yaya rotası</span></div>
+            <div class="map-north">N <span>↑</span></div>
+          </div>
+          <div class="map-foot"><span>Demo arayüz · Noktalar örneklenmiştir</span><button id="resetMap" class="quiet-button">Haritayı sıfırla ↺</button></div>
+        </div>
+        <aside class="observation-card" aria-live="polite">
+          <div class="card-top"><span class="mini-tag" id="placeTag">GÖZLEM 01</span><span class="card-number" id="cardNumber">01</span></div>
+          <div class="card-icon" id="placeIcon">≈</div>
+          <h3 id="placeTitle">Biriken su</h3>
+          <p id="placeDescription">Kaldırım kenarında biriken yağmur suyu, yayaların yolunu değiştirmesine neden oluyor.</p>
+          <div class="observation-meta"><span>⌁</span><span id="placeMeta">Yaya erişimi · Yağış sonrası</span></div>
+          <div class="card-pagination"><button id="prevPlace" aria-label="Önceki gözlem">←</button><span id="placeProgress">1 / 3</span><button id="nextPlace" aria-label="Sonraki gözlem">→</button></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="stories section-wrap" id="stories">
+      <div class="section-heading">
+        <div><div class="section-kicker">03 / GÜNLÜK YAŞAMDAN</div><h2>Her yağmurun<br /><em>bir hikâyesi var.</em></h2></div>
+        <div class="story-controls">
+          <label class="search-box"><span>⌕</span><input id="storySearch" type="search" placeholder="Hikâye ara..." aria-label="Hikâyelerde ara" /></label>
+          <select id="storyFilter" aria-label="Hikâyeleri kategoriye göre filtrele"><option value="all">Tüm hikâyeler</option><option value="esnaf">Esnaf</option><option value="yaya">Yaya deneyimi</option><option value="kent">Kent gözlemi</option></select>
+        </div>
+      </div>
+      <div class="story-grid" id="storyGrid">
+        <article class="story-card" data-category="esnaf" data-search="esnaf dükkan yağmur giriş su">
+          <div class="story-visual visual-shop"><span class="visual-caption">SAHADAN NOT / 01</span><div class="shop-awning"></div><div class="shop-door"></div><div class="puddle"></div><span class="visual-symbol">↗</span></div>
+          <div class="story-content"><div class="story-meta"><span>ESNAF</span><span>01 — ÖRNEK</span></div><h3>“Yağmur başlayınca önce kapının önüne bakıyorum.”</h3><p>Bir iş günü, hava durumunu takip etmekle değil; suyun dükkâna ulaşıp ulaşmayacağını düşünmekle başlıyor.</p><a href="#contribute" class="story-link">Senin hikâyen de var mı? <span>↗</span></a></div>
+        </article>
+        <article class="story-card" data-category="yaya" data-search="yaya kaldırım rota yürümek güvenli erişim">
+          <div class="story-visual visual-walk"><span class="visual-caption">GÜNLÜK ROTA / 02</span><div class="walk-lines"></div><div class="walk-person">●<br />│<br />╱ ╲</div><span class="visual-symbol">↗</span></div>
+          <div class="story-content"><div class="story-meta"><span>YAYA DENEYİMİ</span><span>02 — ÖRNEK</span></div><h3>Bir kaldırım, herkese aynı yolu sunar mı?</h3><p>Su birikintileri bazı yayalar için küçük bir sapma, bazıları içinse geçilemeyen bir engel olabilir.</p><a href="#contribute" class="story-link">Senin hikâyen de var mı? <span>↗</span></a></div>
+        </article>
+        <article class="story-card" data-category="kent" data-search="kent gözlem yağmur suyu yüzey sokak">
+          <div class="story-visual visual-city"><span class="visual-caption">KENTİN İZİ / 03</span><div class="city-shape shape-a"></div><div class="city-shape shape-b"></div><div class="city-shape shape-c"></div><div class="city-rain">⋰ ⋰ ⋰</div><span class="visual-symbol">↗</span></div>
+          <div class="story-content"><div class="story-meta"><span>KENT GÖZLEMİ</span><span>03 — ÖRNEK</span></div><h3>Yağmur yere düşüyor. Peki sonra nereye gidiyor?</h3><p>Yüzeyler, eğim ve altyapı suyun yolunu belirliyor. Sokakta gördüğümüz izler bize bunu anlatabilir.</p><a href="#contribute" class="story-link">Senin hikâyen de var mı? <span>↗</span></a></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Bu aramayla eşleşen hikâye bulunamadı. Başka bir kelime dene.</p>
+    </section>
+
+    <section class="contribute section-wrap" id="contribute">
+      <div class="contribute-panel">
+        <div class="contribute-copy"><div class="section-kicker">04 / SEN DE KATIL</div><h2>Sokağın tanığı<br /><em>sensin.</em></h2><p>Yağmurdan sonra gördüğün bir su birikintisi, değişen bir rota ya da yaşadığın bir deneyim… Küçük bir gözlem, kent hakkında büyük bir şey anlatabilir.</p><div class="privacy-note"><span>◉</span> Bu demo formu herhangi bir sunucuya veri göndermez.</div></div>
+        <form id="observationForm" class="observation-form">
+          <label>Gözlem başlığı<input name="title" type="text" placeholder="Örn. Kaldırımda biriken su" required maxlength="80" /></label>
+          <label>Hangi deneyimi anlatıyorsun?
+            <select name="category" required><option value="">Kategori seç</option><option>Esnaf deneyimi</option><option>Yaya rotası</option><option>Kent gözlemi</option><option>Diğer</option></select>
+          </label>
+          <label>Gözlemin <textarea name="description" rows="3" placeholder="Nerede, ne zaman, nasıl etkiledi?" required maxlength="500"></textarea><span class="char-count"><span id="charCount">0</span>/500</span></label>
+          <button class="button button-primary form-submit" type="submit">Gözlemi ekle <span>↗</span></button>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="#"><span class="brand-mark">↗</span><span>the next <strong>step</strong></span></a>
+    <p>Rainwater, everyday life<br />and trust in the street.</p>
+    <div class="footer-bottom"><span>© 2026 THE NEXT STEP · DEMO</span><a href="#main">Yukarı dön ↑</a></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
